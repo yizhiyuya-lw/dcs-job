@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lw.dcsjob.template.datasource.persistence.mapper.WorkflowTaskBatchMapper">
+
+    <select id="selectWorkflowBatchPageList"
+            parameterType="com.lw.dcsjob.template.datasource.persistence.dataobject.WorkflowBatchQueryDO"
+            resultType="com.lw.dcsjob.template.datasource.persistence.dataobject.WorkflowBatchResponseDO">
+        SELECT batch.*,
+               flow.workflow_name
+        FROM workflow_task_batch batch
+                 JOIN workflow flow ON batch.workflow_id = flow.id
+            ${ew.customSqlSegment}
+    </select>
+
+    <select id="selectWorkflowBatchList"
+            resultType="com.lw.dcsjob.template.datasource.persistence.dataobject.WorkflowBatchResponseDO">
+        SELECT batch.*,
+               flow.workflow_name
+        FROM workflow_task_batch batch
+                 JOIN workflow flow ON batch.workflow_id = flow.id
+            ${ew.customSqlSegment}
+    </select>
+
+</mapper>

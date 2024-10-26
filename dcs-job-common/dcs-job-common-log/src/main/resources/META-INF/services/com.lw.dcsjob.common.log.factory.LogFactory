@@ -1,0 +1,3 @@
+com.lw.dcsjob.common.log.dialect.slf4j.Slf4jLogFactory
+com.lw.dcsjob.common.log.dialect.log4j2.Log4j2LogFactory
+com.lw.dcsjob.common.log.dialect.log4j.Log4jLogFactory
