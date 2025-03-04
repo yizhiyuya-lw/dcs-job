@@ -9,32 +9,32 @@ public interface SystemConstants {
     /**
      * 请求头 key
      */
-    String SNAIL_JOB_HEAD_KEY = "snail-job";
+    String DCS_JOB_HEAD_KEY = "dcs-job";
 
     /**
      * 异常重试码 key
      */
-    String SNAIL_JOB_STATUS_CODE_KEY = "snail-job-status";
+    String DCS_JOB_STATUS_CODE_KEY = "dcs-job-status";
 
     /**
      * 异常重试码
      */
-    String SNAIL_JOB_STATUS_CODE = "519";
+    String DCS_JOB_STATUS_CODE = "519";
 
     /**
      * 客户端组名
      */
-    String SNAIL_JOB_CLIENT_GROUP = "group";
+    String DCS_JOB_CLIENT_GROUP = "group";
 
     /**
      * 客户端组对应token
      */
-    String SNAIL_JOB_CLIENT_GROUP_TOKEN = "token";
+    String DCS_JOB_CLIENT_GROUP_TOKEN = "token";
 
     /**
      * 命名空间
      */
-    String SNAIL_JOB_CLIENT_NAMESPACE = "namespace";
+    String DCS_JOB_CLIENT_NAMESPACE = "namespace";
 
     /**
      * 默认的调用链超时时间 单位毫秒(ms)
@@ -122,6 +122,20 @@ public interface SystemConstants {
          */
         String RETRY_GENERATE_IDEM_ID = "/retry/generate/idempotent-id/v1";
 
+        String OPENAPI_ADD_JOB = "/api/job/add";
+
+        String OPENAPI_UPDATE_JOB = "/api/job/update";
+
+        String OPENAPI_GET_JOB_DETAIL = "/api/job/getJobDetail";
+
+        String OPENAPI_TRIGGER_JOB = "/api/job/triggerJob";
+
+        String OPENAPI_TRIGGER_WORKFLOW = "/api/job/triggerWorkFlow";
+
+        String OPENAPI_UPDATE_JOB_STATUS = "/api/job/updateJobStatus";
+
+        String OPENAPI_UPDATE_WORKFLOW_STATUS = "/api/job/updateWorkFlowStatus";
+
     }
 
     String LOGO = "welcome use dcsjob";
@@ -180,7 +194,7 @@ public interface SystemConstants {
     /**
      * Snail Job 认证Token
      */
-    String SNAIL_JOB_AUTH_TOKEN = "SJ-TOKEN";
+    String DCS_JOB_AUTH_TOKEN = "SJ-TOKEN";
 
     /**
      * 日志类型字段
