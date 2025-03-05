@@ -1,6 +1,7 @@
 package com.lw.dcsjob.server.web.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.lw.dcsjob.server.web.annotation.LoginRequired;
 import com.lw.dcsjob.template.datasource.persistence.mapper.NamespaceMapper;
 import com.lw.dcsjob.template.datasource.persistence.po.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,7 @@ public class NamespaceController {
     }
 
     @RequestMapping("/getAll")
+    @LoginRequired
     public Object getAll() {
         return namespaceMapper.selectList(new LambdaQueryWrapper<Namespace>().eq(Namespace::getDeleted, 0));
     }
